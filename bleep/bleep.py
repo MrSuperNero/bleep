@@ -36,18 +36,22 @@ def main():
     # split message into list of words to compare
     words = message.split()
 
+    # iterate through words in message
     for word in words:
+
+        # make word lowercase to compare
         lowered_word = word.lower()
 
+        # look through words in banned list
         for s in banned:
+
+            # if banned word is in the word in messge
             if s in lowered_word:
-                print("*" * len(s), end='')
-                print(lowered_word[len(s):len(lowered_word)], end=' ')
-                break
+                print("*" * len(s), end='') # print asterisks
+                print(lowered_word[len(s):len(lowered_word)], end=' ') # print rest of word to avoid losing info (commas, letters, etc)
+                break # go back to beginning of loop
 
-            else:
-                continue
-
+        # if word is not in banned, print it
         else:
             print(word, end=' ')
 
