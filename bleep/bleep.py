@@ -55,21 +55,6 @@ def main():
         else:
             print(word, end=' ')
 
-    # compare words in message to banned words
-    # need to check for cases of 
-    # for word in words:
-
-    #     # lowercase word to compare to banned words
-    #     censor = word.lower()
-
-    #     # replace banned words in messages to asterisks
-    #     if any(strg in banned for censor):
-    #         print("*" * len(word), end=' ')
-
-    #     # print words that aren't banned
-    #     else:
-    #         print(word, end=' ')
-
     # print new line
     print()
 
